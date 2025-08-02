@@ -10,9 +10,6 @@ class FileState extends Equatable {
   List<Object?> get props => [file, isUploaded];
 
   FileState copyWith({PlatformFile? file, bool? isUploaded}) {
-    return FileState(
-      file: file ?? this.file,
-      isUploaded: isUploaded ?? this.isUploaded,
-    );
+    return FileState(file: file, isUploaded: isUploaded ?? this.isUploaded);
   }
 }
